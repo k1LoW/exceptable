@@ -69,9 +69,7 @@ class ExceptableBehavior extends ModelBehavior {
                     $linkModel =& $model->{$assoc};
                     $external = isset($assocData['external']);
                     if ($model->useDbConfig == $linkModel->useDbConfig) {
-                        if (true === $db->generateAssociationQuery($model, $linkModel, $type, $assoc, $assocData, $queryData, $external, $null)) {
-                            $linkedModels[$type . '/' . $assoc] = true;
-                        }
+                        $db->generateAssociationQuery($model, $linkModel, $type, $assoc, $assocData, $queryData, $external, $null);
                     }
                 }
             }
