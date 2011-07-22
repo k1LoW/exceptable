@@ -18,7 +18,7 @@ class ExceptableBehavior extends ModelBehavior {
         if (!empty($queryData['fields'])) {
             return $queryData;
         }
-        if ($queryData['except']) {
+        if (!empty($queryData['except'])) {
             $except = (array)$queryData['except'];
             foreach ($except as $key => $field) {
                 if (!preg_match('/^`/', $field)) {
