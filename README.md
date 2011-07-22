@@ -13,8 +13,8 @@ This plugin can specify fields you want exclude from conditions.
 3. Copy the resulting folder to app/plugins
 4. Rename the folder you just copied to exceptable
 5. Add the following code in app_model.php
-
-    var $actsAs = array('Exceptable.'Exceptable');
+        
+        var $actsAs = array('Exceptable.'Exceptable');
 
 ## Usage ##
 
